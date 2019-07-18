@@ -10,6 +10,30 @@ const COMPONENT_TYPE_MAP = {
   picture: 'img'
 };
 
+const renderHtml = ({ css, html, js }) => {
+return `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=0;">
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <style>${css}</style>
+  </head>
+  <body>
+    ${html}
+  </body>
+  <script>
+    ${js}
+  </script>
+</html>`
+}
+
 /**
  * @desc 所有文档相关信息的生成
  * @param originJson originJson
@@ -909,6 +933,11 @@ module.exports = function(layoutData, opts) {
     panelDisplay: [
       {
         panelName: 'index.html',
+        panelValue: renderHtml(renderData),
+        panelType: 'BuilderRaxView'
+      },
+      {
+        panelName: 'dom.html',
         panelValue: helper.printer(dslMessage.xmlPartsJson),
         panelType: 'BuilderRaxView'
       },
