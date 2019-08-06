@@ -108,7 +108,8 @@ function generatePartsJson(originJson, option) {
     xmlPartsJson: xmlPartsJson,
     stylePartsJson: stylePartsJson,
     scriptPartsJson: scriptPartsJson,
-    styleRemCssPartsJson: styleRemCssPartsJson
+    styleRemCssPartsJson: styleRemCssPartsJson,
+    mockDataStore: mockDataStore
   };
 
   if (responsiveStylePartsJson) {
@@ -934,6 +935,11 @@ module.exports = function(layoutData, opts) {
       {
         panelName: 'index.html',
         panelValue: renderHtml(renderData),
+        panelType: 'BuilderRaxView'
+      },
+      {
+        panelName: 'mockDataStore.json',
+        panelValue: JSON.stringify(dslMessage.mockDataStore),
         panelType: 'BuilderRaxView'
       },
       {
