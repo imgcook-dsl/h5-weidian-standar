@@ -425,10 +425,10 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
-vm2@^3.8.0:
-  version "3.8.1"
-  resolved "https://registry.npm.taobao.org/vm2/download/vm2-3.8.1.tgz#82ac7845009aee79852429da49f0f4f114c644e5"
-  integrity sha1-gqx4RQCa7nmFJCnaSfD08RTGROU=
+vm2@^3.9.4:
+  version "3.9.4"
+  resolved "https://registry.yarnpkg.com/vm2/-/vm2-3.9.4.tgz#2e118290fefe7bd8ea09ebe2f5faf53730dbddaa"
+  integrity sha512-sOdharrJ7KEePIpHekiWaY1DwgueuiBeX/ZBJUPgETsVlJsXuEx0K0/naATq2haFvJrvZnRiORQRubR0b7Ye6g==
 
 wordwrap@~1.0.0:
   version "1.0.0"
